@@ -1,0 +1,48 @@
+{
+  "name": "termax",
+  "version": "0.1.0",
+  "description": "AI assistant in your terminal. Chat, pipe files, analyze code. Supports OpenAI, Anthropic, Ollama.",
+  "main": "dist/index.js",
+  "bin": {
+    "termax": "dist/index.js",
+    "tx": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "ai",
+    "cli",
+    "terminal",
+    "chatgpt",
+    "claude",
+    "ollama",
+    "openai",
+    "anthropic",
+    "assistant",
+    "code"
+  ],
+  "author": "jasur",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "conf": "^15.1.0",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "openai": "^6.32.0",
+    "ora": "^9.3.0"
+  }
+}
